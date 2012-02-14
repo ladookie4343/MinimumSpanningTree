@@ -1,0 +1,5 @@
+C:\Users\Matt\Desktop\My Dropbox\Visual Studio\MinimumSpanningTree\MinimumSpanningTree\bin\Debug\MinimumSpanningTree.exe
+C:\Users\Matt\Desktop\My Dropbox\Visual Studio\MinimumSpanningTree\MinimumSpanningTree\bin\Debug\MinimumSpanningTree.pdb
+C:\Users\Matt\Desktop\My Dropbox\Visual Studio\MinimumSpanningTree\MinimumSpanningTree\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Matt\Desktop\My Dropbox\Visual Studio\MinimumSpanningTree\MinimumSpanningTree\obj\x86\Debug\MinimumSpanningTree.exe
+C:\Users\Matt\Desktop\My Dropbox\Visual Studio\MinimumSpanningTree\MinimumSpanningTree\obj\x86\Debug\MinimumSpanningTree.pdb

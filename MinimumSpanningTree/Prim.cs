@@ -7,8 +7,21 @@ namespace MinimumSpanningTree
 {
     class Prim : IMinTree
     {
+        Graph graph;
+        List<Edge> edgeList;
+
+        public Prim(string inputFile)
+        {
+            edgeList = EdgeHandler.initEdges(inputFile);
+            graph = new Graph(edgeList);
+        }
+
         public List<Edge> findMinTree()
         {
+
+
+
+
             return null;
         }
     }

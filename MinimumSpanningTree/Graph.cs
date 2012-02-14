@@ -7,24 +7,33 @@ namespace MinimumSpanningTree
 {
     class Graph
     {
-        bool directed;
         List<Edge> edgeList;
+        LinkedList<Edge>[] adjList;
         
+        int length;
+        public int Length { get { return length; } }
 
-        public Graph(bool directed, string inputFile)
+        const int MAX_NODES = 256;
+
+        public Graph(List<Edge> edgeList)
         {
-            this.directed = directed;
-            edgeList = EdgeHandler.initEdges(inputFile);
+            this.edgeList = edgeList;
+            adjList = new LinkedList<Edge>[MAX_NODES];
             initAdjList();
+            length = EdgeHandler.calculateNumNodes(edgeList);
+        }
+
+        public LinkedList<Edge> getList(int v)
+        {
+            return adjList[v];
         }
 
         private void initAdjList()
         {
-            LinkedList<Edge> edgeNode = new LinkedList<Edge>();
-
             for (int i = 0; i < edgeList.Count; ++i)
             {
-                adjList[edgeList[i].v1] = 
+                adjList[edgeList[i].v1].AddLast(edgeList[i]);
+                adjList[edgeList[i].v2].AddLast(edgeList[i]);
             }
         }
     }

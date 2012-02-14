@@ -12,7 +12,9 @@ namespace MinimumSpanningTree
         private int[] outof;
         int n;
 
-        public IndirectHeap(int[] key)
+        public IndirectHeap() { }
+
+        public void init(int[] key)
         {
             n = key.Length;
             this.key = key;

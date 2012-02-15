@@ -37,11 +37,17 @@ namespace MinimumSpanningTree
             for (int i = 0; i < n; ++i)
             {
                 int v = heap.deleteMin();
-                
+                LinkedList<Edge> adjList = graph.getList(v);
+                foreach (Edge e in adjList)
+                {
+                    int w = v == e.v1 ? e.v2 : e.v1;
+                    if (heap.isIn(w) && e.weight < heap.keyVal(w))
+                    {
+                        parent[w] = v;
+                        heap.decrease(w, e.weight);
+                    }
+                }
             }
-
-
-
             return null;
         }
     }

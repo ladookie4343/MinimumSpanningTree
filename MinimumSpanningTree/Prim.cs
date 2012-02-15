@@ -37,7 +37,7 @@ namespace MinimumSpanningTree
             for (int i = 0; i < n; ++i)
             {
                 int v = heap.deleteMin();
-                // TODO
+                
             }
 
 

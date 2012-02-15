@@ -19,6 +19,10 @@ namespace MinimumSpanningTree
         {
             this.edgeList = edgeList;
             adjList = new LinkedList<Edge>[MAX_NODES];
+            for (int i = 0; i < MAX_NODES; ++i)
+            {
+                adjList[i] = new LinkedList<Edge>();
+            }
             initAdjList();
             length = EdgeHandler.calculateNumNodes(edgeList);
         }
@@ -29,7 +33,7 @@ namespace MinimumSpanningTree
         }
 
         private void initAdjList()
-        {
+        {            
             for (int i = 0; i < edgeList.Count; ++i)
             {
                 adjList[edgeList[i].v1].AddLast(edgeList[i]);

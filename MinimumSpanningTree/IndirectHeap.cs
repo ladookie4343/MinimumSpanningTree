@@ -16,7 +16,7 @@ namespace MinimumSpanningTree
 
         public void init(int[] key)
         {
-            n = key.Length;
+            n = key.Length - 1;
             this.key = key;
             into = new int[key.Length];
             initArray(into);
@@ -79,7 +79,7 @@ namespace MinimumSpanningTree
 
         private void heapify()
         {
-            for (int i = key.Length / 2; i > 0; ++i)
+            for (int i = key.Length / 2; i > 0; --i)
             {
                 siftdown(i);
             }
